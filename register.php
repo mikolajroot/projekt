@@ -34,7 +34,7 @@ if(isset($_POST['username-register']) && isset($_POST['password-register']) && i
     if($result) {
       // Rejestracja udana, przekieruj na stronę logowania
       $_SESSION['registerSuccess']= true;
-      header("Location: login.php?registration=success");
+      header("Location: login.php");
       exit();
     } else {
       echo "Error: " . $insertQuery . "<br>" . mysqli_error($con);
