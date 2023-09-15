@@ -33,6 +33,7 @@ if(isset($_POST['username-register']) && isset($_POST['password-register']) && i
 
     if($result) {
       // Rejestracja udana, przekieruj na stronę logowania
+      $_SESSION['registerSuccess']= true;
       header("Location: login.php?registration=success");
       exit();
     } else {
@@ -47,4 +48,3 @@ if(isset($_POST['username-register']) && isset($_POST['password-register']) && i
   header("Location: login.php");
   exit();
 }
-?>
