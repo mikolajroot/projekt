@@ -30,7 +30,7 @@ if (isset($_SESSION['loggedOn']) && ($_SESSION['loggedOn'] == true)) {
         alertBox.style.display = 'block';
       
         setTimeout(function() {
-          alertBox.style.opacity = '1'; // Set opacity to 1 for fading in
+          alertBox.style.opacity = '1';
       }, 500);
 
         setTimeout(function() {
