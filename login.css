@@ -127,3 +127,12 @@ body {
     background-color: transparent;
     text-decoration: underline;
   }
+  #alert{
+    background-color: #f1faee;
+    padding: 9px;
+    text-align: center;
+    border: solid #45789D 5px;
+    border-radius: 30px;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }

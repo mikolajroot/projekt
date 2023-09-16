@@ -1,20 +1,19 @@
 <?php
-session_start();
 
 if (!isset($_POST["username-login"]) || !isset($_POST["password-login"])) {
     header("Location: index.php");
     exit();
 }
-
-$host = "localhost";
+$host = "localhost"; 
 $user = "root";
-$password = "";
-$database = "inf";
+$password = ""; 
+$database = "api";
 
 $con = mysqli_connect($host, $user, $password, $database);
-if ($con->connect_errno != 0) {
-    echo "Error: " . $con->connect_errno;
-} else {
+if (mysqli_connect_errno()) {
+    echo "Error: " . mysqli_connect_error();
+    exit();
+} else{
     $username = $_POST['username-login'];
     $password = $_POST['password-login'];
 
@@ -23,38 +22,27 @@ if ($con->connect_errno != 0) {
 
     $sql = "SELECT * FROM users WHERE username='$username' AND pass='$password'";
 
-    if ($result = @$con->query($sql)) {
-        $ile_userow = $result->num_rows;
-        if ($ile_userow > 0) {
-            if ($username == "admin" && $password == "admin") {
-                $_SESSION['admin'] = true;
-                $_SESSION['zalogowany'] = true;
+    $result = mysqli_query($con, $sql);
+    if ($result !== false) {
+        $numberOfUsers = mysqli_num_rows($result);
+        session_start();
+        if ($numberOfUsers > 0) {
+            $row = mysqli_fetch_assoc($result);
+            $_SESSION['loggedOn'] = true;
+            $_SESSION['user'] = $row['username'];
 
-                $wiersz = $result->fetch_assoc();
-                $_SESSION['id'] = $wiersz['id'];
-                $_SESSION['user'] = $wiersz['username'];
-
-
-                $result->free_result();
-                header('Location: main.php');
-            } else {
-                $_SESSION['admin'] = false;
-                $_SESSION['zalogowany'] = true;
-
-                $wiersz = $result->fetch_assoc();
-                $_SESSION['id'] = $wiersz['id'];
-                $_SESSION['user'] = $wiersz['username'];
-
-
-                $result->free_result();
-                header('Location: main.php');
-            }
+            mysqli_free_result($result);
+            header('Location: main.php');
         } else {
-
             $_SESSION['error'] = '<script>alert("Nieprawidłowy login lub hasło")</script>';
             header('Location: index.php');
         }
+    } else {
+        echo "Error executing SQL query: " . mysqli_error($con);
+        header('Location: index.php');
     }
 
-    $con->close();
+    mysqli_close($con);
 }
+
+?>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['zalogowany'])) {
+if (!isset($_SESSION['loggedOn'])) {
   header('Location: index.php');
   exit();
 }
@@ -15,9 +15,8 @@ if (!isset($_SESSION['zalogowany'])) {
 </head>
 <body>
     <?php
-    include 'connect.php';
     echo "<p>Witaj " . $_SESSION['user'] . " ! </p>";
     ?>
-    <p><a href="logout.php"></a></p>
+    <p><a href="logout.php">Wyloguj się</a></p>
 </body>
 </html>
