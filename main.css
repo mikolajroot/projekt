@@ -27,7 +27,6 @@ body {
     font-size: 45px;
     margin: 10px;
     display: flex;
-    align-items: left;
     margin-left: 10px;
 
 
@@ -48,15 +47,16 @@ body {
   .welcome{
     
     font-family:Impact, 'Courier New', Courier, monospace;
-    margin: auto 275px;
-    font-size: 40px;
+    text-align:center ;
     flex-grow: 1;
+    margin: auto auto;
+    font-size: 40px;
 
 
   }
   .logout{
     text-align: right;
-    margin: auto 0px;
+    margin: auto 200px;
     font-size: 30px;
     text-decoration: none;
     margin-right: 20px;

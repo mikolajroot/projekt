@@ -24,7 +24,9 @@ if (!isset($_SESSION['loggedOn'])) {
   </div>
     <?php
     echo "<p class='welcome'>Witaj " . $_SESSION['user'] . "! </p>";
-    ?> <p><a href="logout.php" class="logout">Wyloguj się</a></p></header>
+    ?> 
+    <p><a href="logout.php" class="logout">Wyloguj się</a></p>
+</header>
     
 
 
