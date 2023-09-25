@@ -137,3 +137,9 @@ clicker.addEventListener("click", () => {
     localStorage.setItem('pointsPerClick', pointsPerClick.toString());
 
 })
+
+let logout = document.querySelector(".logout");
+logout.addEventListener("click", () => {
+    localStorage.removeItem("points");
+    localStorage.removeItem("pointsPerClick");
+})
