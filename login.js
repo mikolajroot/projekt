@@ -13,14 +13,18 @@ function validateForm() {
     if (username === "") {
       usernameError.textContent = "Nazwa użytkownika nie może być pusta.";
       isValid = false;
+    } else if (username.length > 20) {
+      usernameError.textContent = "Nazwa użytkownika nie może przekraczać 20 znaków.";
+      isValid = false;
     }
   
     if (password === "") {
       passwordError.textContent = "Hasło nie może być puste.";
       isValid = false;
     }
-  
+    localStorage.removeItem("points");
     return isValid;
+
   }
   //skrypt do usunięcia błędów po kliknięciu przycisku reset
   const resetButton = document.querySelector('input[type="reset"]');

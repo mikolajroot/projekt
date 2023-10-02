@@ -64,7 +64,7 @@ if (isset($_SESSION['loggedOn']) && ($_SESSION['loggedOn'] == true)) {
         ?>
       </div>
       <input type="submit" value="Zaloguj się">
-      <input type="reset" value="Zresetuj hasło" id="reset"><br>
+      <input type="reset" value="Wyczyść" id="reset"><br>
       <a href="registerMain.php" class="register">Zajerestruj się </a>
 
     </form>

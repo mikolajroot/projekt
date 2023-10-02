@@ -1,9 +1,7 @@
-<?php
-    session_start();
+ <?php
+  session_start();
 
-
-    session_unset();
-
-    header("Location: index.php");
+  session_unset();
+  header("Location:index.php");
 
 ?>

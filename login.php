@@ -31,6 +31,7 @@ if (mysqli_connect_errno()) {
             $_SESSION['loggedOn'] = true;
             $_SESSION['user'] = $row['username'];
 
+
             mysqli_free_result($result);
             header('Location: main.php');
         } else {

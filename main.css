@@ -1,69 +1,205 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #A8DADC;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #A8DADC;
+}
 
-  header {
-    background-color: #1D3557;
-    color:#fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .header-content{
-    display: flex;
-    align-items: center;
-  }
+header {
+  background-color: #1D3557;
+  color:#fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-content{
+  display: flex;
+  align-items: center;
+}
 
-  img {
-    margin-left: 10px;
-    margin-top: 10px;
-  }
+img {
+  margin-left: 10px;
+  margin-top: 8px;
+}
 
-  .HeaderTitle{
-    font-family:Impact, 'Courier New', Courier, monospace;
-    font-size: 45px;
-    margin: 10px;
-    display: flex;
-    margin-left: 10px;
-
-
-  }
-
-  footer {
-    position: fixed;
-    padding: 10px 10px 0px 10px;
-    bottom: 0;
-    width: 100%;
-    height: 40px;
-    background: #1D3557;
-    color: #fff;
-    font-size: 25px;
-    text-align: center;
-  }
-
-  .welcome{
-    
-    font-family:Impact, 'Courier New', Courier, monospace;
-    text-align:center ;
-    flex-grow: 1;
-    margin: auto auto;
-    font-size: 40px;
+.HeaderTitle{
+  font-family:Impact, 'Courier New', Courier, monospace;
+  font-size: 45px;
+  margin: 10px;
+  display: flex;
+  margin-left: 10px;
 
 
-  }
-  .logout{
-    text-align: right;
-    margin: auto 200px;
-    font-size: 30px;
-    text-decoration: none;
-    margin-right: 20px;
-    font-family:monospace;
-    font-weight: bold;
-  }
-  .logout:visited{
-    color:#fff;
+}
 
-  }
+footer {
+  position: fixed;
+  padding: 10px 10px 0px 10px;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background: #1D3557;
+  color: #fff;
+  font-size: 25px;
+  text-align: center;
+}
+
+.welcome{
+  
+  font-family:Impact, 'Courier New', Courier, monospace;
+  text-align:center ;
+  flex-grow: 1;
+  margin: auto auto;
+  font-size: 40px;
+
+
+}
+.save{
+  font-size: 20px;
+  margin: auto 20px;
+  font-family: monospace;
+  font-weight: bold;
+  cursor: pointer;
+}
+.logout{
+  text-align: right;
+  margin: auto 20px;
+  font-size: 30px;
+  text-decoration: none;
+  margin-right: 20px;
+  font-family:monospace;
+  font-weight: bold;
+}
+.logout:visited{
+  color:#fff;
+
+}
+/* Sklep  */
+.store{
+  background-color: #F1FAEE;
+  width: 25%;
+  margin: 60px 70px;
+  border: solid #45789D 5px;
+   border-radius: 30px;
+   float: left;
+}
+.store-name{
+  font-size: 40px;
+   text-align: center;
+   margin-bottom: 20px;
+   margin-top: 10px;
+   font-weight: bold;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   letter-spacing: 5px;
+   
+}
+.store-buy {
+  font-size: 20px;
+  padding-left: 20px;
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.price{
+  padding-left: 20px;
+}
+#PriceAndAmount{
+  font-weight: bold;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+hr{
+  border-top: 3px solid #dde6da;
+}
+button{
+  background-color: #45789D;
+  text-align: center;
+  padding: 7px 21px;
+  border-radius: 20px;
+  color: #fff;
+  transition: background-color 0.5s ease-in-out;
+  cursor: pointer;
+  float: right;
+  margin-right: 20px;
+  border: solid #45789D 2px;
+}
+button:hover{
+  text-align: center;
+  padding: 7px 21px;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #45789D;
+  border: solid #45789D 2px;
+}
+/* Clicker */
+.clicker{
+  width: 25%;
+  margin: 55px 70px;
+  border-radius: 20px;
+  display: inline-block;
+}
+.nickname{
+  background-color: #F1FAEE;
+  border: solid #45789D 5px;
+ border-radius: 30px;
+ margin: 5px;
+ padding-bottom: 20px;
+ font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+ 
+}
+.click{
+  width: 300px;
+  height: auto;
+  display: block;
+  margin: auto;
+  margin-top: 130px;
+  cursor: pointer;
+}
+  .score{
+  width: auto;
+  text-align: center;
+  font-weight: bold;
+  display: block;
+}
+.clicks{
+  width: auto;
+  text-align: center;
+  font-weight: bold;
+  display: block;
+}
+/* leaderboard */
+.leaderboard {
+  background-color: #F1FAEE;
+  width: 25%;
+  margin: 60px 70px;
+  border: solid #45789D 5px;
+  border-radius: 30px;
+  font-size: 30px;
+  text-align: center;
+  float:right;
+}
+.leaderboard-name{
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 22px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  letter-spacing: 5px;
+}
+.leaderboard-position-top{
+  font-size: 20px;
+  text-align: left;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  margin-top: 11px;
+  font-weight: bold;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.leaderboard-position{
+  font-size: 20px;
+  text-align: left;
+  margin-left: 28px;
+  margin-bottom: 18px;
+  margin-top: 10px;
+}
+
+

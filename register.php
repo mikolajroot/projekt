@@ -28,7 +28,7 @@ if(isset($_POST['username-register']) && isset($_POST['password-register']) && i
   if($password == $passwordRepeat) {
     
 
-    $insertQuery = "INSERT INTO users (username, pass) VALUES ('$username', '$password')";
+    $insertQuery = "INSERT INTO users (username, pass, score) VALUES ('$username', '$password', '0')";
     $result = mysqli_query($con, $insertQuery);
 
     if($result) {
