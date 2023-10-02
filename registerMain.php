@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-if (isset($_SESSION['zalogowany']) && ($_SESSION['zalogowany'] == true)) {
-    header('Location: main.php');
-    exit();
+if (isset($_SESSION['loggedOn']) && ($_SESSION['loggedOn'] == true)) {
+  header('Location: main.php');
+  exit();
 }
 ?>
 <!DOCTYPE html>
@@ -45,12 +45,12 @@ if (isset($_SESSION['zalogowany']) && ($_SESSION['zalogowany'] == true)) {
         ?>
       </div>
       <input type="submit" value="Zajerestruj się">
-      <input type="reset" value="Reset" id="reset"><br>
+      <input type="reset" value="Wyczyść" id="reset"><br>
       <a href="index.php" class="register">Zaloguj się</a>
     </form>
    
   </div>
-  <script src="register.js"></script>
+  <script src="login.js"></script>
 
   <footer>Projekt stworzony przez: Mikołaj Miszka & Kamil Piekarski</footer>
 </body>

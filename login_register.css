@@ -33,12 +33,11 @@ body {
     background: #1D3557;
     color: #fff;
     font-size: 25px;
-    text-align: center;
   }
   
   .form-container {
     width: 500px;
-    margin: 180px auto;
+    margin: 60px auto;
     padding: 3rem;
     background-color: #F1FAEE;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
